@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .mobile-first {
+      padding: 1em;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+      margin: 2em auto;
+      max-width: 750px;
+    }
+
+    /*  mobile-first */
+    @media (min-width: 600px) {
+      .mobile-first .sales-points {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .mobile-first .sales-point {
+        width: 30%;
+      }
+
+      .sales-points:last-child:nth-child(3n - 2) {
+        margin-right: calc(30% + 10% / 2);
+      }
+    }
+  </style>
 </head>
+
 <body>
-  1
+  <div class="mobile-first">
+    <h2>作品展示</h2>
+    <div class="sales-points">
+      <div class="sales-point">
+        <h3>扫雷</h3>
+        <p>翻转空白方块并避开隐藏雷的那些方块。</p>
+      </div>
+      <div class="sales-point">
+        <h3>贪吃蛇</h3>
+        <p>控制蛇头方向吃蛋，从而使得蛇变得越来越长。</p>
+      </div>
+      <div class="sales-point">
+        <h3>24点</h3>
+        <p>从扑克中任意抽出四张，用加、减、乘、除的方法使结果成为24，每张牌只能用一次。</p>
+      </div>
+      <div class="sales-point">
+        <h3>弹力球</h3>
+        <p>使用canvas实现</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
